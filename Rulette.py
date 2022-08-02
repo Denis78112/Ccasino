@@ -106,5 +106,40 @@ def roulette():
                 else:
                     money -= stavka
                     proigr(stavka)
-            
+            if (x == "2"):
+                print("    Ты ставил на НЕЧЁТНОЕ!")
+                if (number < 37 and number % 2 != 0):
+                    money += stavka
+                    pobeda(stavka)
+                else:
+                    money -= stavka
+                    proigr(stavka)
+            elif (x == "3"):
+                print(f"    Ставка сделана на  диапазон чсиле {textDuzhina}.")
+                winDuzhina = ""
+                if (number > 0 and number <13):
+                    winDuzhina = "1"
+                elif (number >12 and number < 25):
+                    winDuzhina = "2"
+                elif (number > 24 and number < 37):
+                    winDuzhina = "3"
+                
+                if (duzhina == winDuzhina):
+                    money += stavka * 2
+                    pobeda(stavka * 3)
+                else:
+                    money -= stavka
+                    proigr(stavka)
+            elif (x == "4"):
+                print(f"    Ставка сделана на число {chislo}")
+                if (number == chislo):
+                    money += stavka * 35
+                    pobeda(stavka * 36)
+                else:
+                    money -= stavka
+                    proigr(stavka)
+
+    print()
+    input(" Нажмите Enter для продолжения...")
+
 

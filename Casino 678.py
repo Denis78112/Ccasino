@@ -6,7 +6,7 @@ defaultMoney = 10000
 windll.Kernel32.GetStdHandle.restype = c_ulong
 h = windll.Kernel32.GetStdHandle(c_ulong(0xfffffff5))
 
-#Вывод сообщения о выигрышеэ
+#Вывод сообщения о выигрыше
 def pobeda(result):
     color(14)
     print(f"    Победа за тобой! Выигрыш составил: {result} {valuta}")
