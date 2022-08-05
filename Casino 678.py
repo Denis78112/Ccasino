@@ -1,6 +1,5 @@
 # Казино 678
 from ctypes import *
-from re import T
 import time
 import random
 
@@ -94,7 +93,7 @@ def getOHBRes(stavka):
         if (col > 15):
             col = 10
         
-        print("    " + "%" * )
+        print("    " + "%" * 10)
         print(f"    {d1} {d2} {d3} {d4} {d5}")
 
     maxCount = getMaxCount(d1, d2, d3, d4, d5)
@@ -248,7 +247,7 @@ def dice():
 def getRoulette(visible):
     tickTime = random.randint(100, 200 ) / 10000
     mainTime = 0
-    number = randon.randint(0, 38)
+    number = random.randint(0, 38)
     increaseTickTime = random.randint(100, 110) / 100
     col = 1
 
